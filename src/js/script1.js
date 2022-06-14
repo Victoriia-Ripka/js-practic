@@ -1,38 +1,26 @@
-// function isAdult(age) {
-//   const passed = age >= 18;
-//   return passed;
-// }
+"use strict";
 
+// в ретурн покласти оцей вираз, а не робити змінну
+// function isAdult(age) {
+//   // const passed = age >= 18;
+//   // return passed;
+//   return age >= 18;
+// }
 // const a = 20;
 // console.log(a);
 // console.log(isAdult(a));
 
-//в ретурн покласти оцей вираз, а не робити змінну
-
-
-
-// const a = 20;
-// const message = "hello world!";
-
-// console.log(a);
-// console.log(message);
-
-
-
-function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
-  let message;
-  const totalPrice = pricePerDroid * orderedQuantity;
-  const keptMoney = customerCredits - totalPrice;
-
-  if( keptMoney < 0){
-    message = "Insufficient funds!";
-  } else {
-    message = "You ordered ${orderedQuantity} droids, you have ${keptMoney} credits left";
-  }
-
+function checkStorage(available, ordered) {
+  let message = "The order is accepted, our manager will contact you";
+  if (ordered === 0) {
+    message = "Your order is empty!";
+  } else if (ordered > available) {
+    message = "Your order is too large, not enough goods in stock!";
+  } 
   return message;
 }
 
-console.log(makeTransaction(3000, 5, 23000));
-console.log(makeTransaction(1000, 3, 15000));
-console.log(makeTransaction(500, 10, 5000));
+
+checkStorage(0, 10);
+checkStorage(10, 10);
+checkStorage(10, 0);
