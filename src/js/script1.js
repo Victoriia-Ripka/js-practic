@@ -1,7 +1,6 @@
 "use strict";
 // ========== Модуль 2. Занятие 4. Функции ==========
 
-
 // Example 1 - Индекс массы тела
 // Напиши функцию calcBMI(weight, height) которая рассчитывает и возвращает индекс массы тела человека.
 //Для этого необходимо разделить вес в киллограммах на квадрат высоты человека в метрах.
@@ -15,7 +14,6 @@
 //   const BMI = weightNumber / (heightNumber * heightNumber);
 //   return BMI.toFixed(1);
 // }
-
 
 // const bmi = calcBMI('88,3', '1.75');
 // console.log(bmi); // 28.8
@@ -174,7 +172,6 @@
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 
 
-
 // ========== Модуль 3. Занятие 5. Об'єкти ==========
 
 // Example 1 - Основы обьектов
@@ -293,32 +290,13 @@ const account = {
 };
 
 
+// ========== Модуль 3. Занятие 6. Деструктуризация и rest/spread ==========
 
 
-
-// ========== Модуль 3. Занятие 6. &&& ==========
-
-
-// ========== Модуль 4. Занятие 7. &&& ==========
-function changeEven(numbers, value) {
-  // Change code below this line
-  const newNumbers = [];
-  numbers.forEach( element => { element % 2 === 0 ? newNumbers.push(element + value) : newNumbers.push(element)});
-  return newNumbers;
-  // for (let i = 0; i < numbers.length; i += 1) {
-  //   if (numbers[i] % 2 === 0) {
-  //     numbers[i] = numbers[i] + value;
-  //   }
-  // }
-  // Change code above this line
-}
-//console.log(changeEven([1, 2, 3, 4, 5], 10)); //[1, 12, 3, 14, 5
-//console.log(changeEven([2, 8, 3, 7, 4, 6], 10)); //[12, 18, 3, 7, 14, 16]
+// ========== Модуль 4. Занятие 7. Коллбеки. Стрелочные функции. forEach ==========
 
 
-
-// ========== Модуль 4. Занятие 8. &&& ==========
-
+// ========== Модуль 4. Занятие 8. Коллбеки. Стрелочные функции. forEach ==========
 
 
 // ========== Модуль 5. Занятие 9. Контекст вызова функции и this ==========
@@ -327,20 +305,20 @@ function changeEven(numbers, value) {
 // Напишите метод calcTotalPrice(stoneName), который принимает название камня и рассчитывает
 //  и возвращает общую стоимость камней с таким именем, ценой и количеством из свойства stones.
 
-// const chopShop = {
-//   stones: [
-//     { name: 'Emerald', price: 1300, quantity: 4 },
-//     { name: 'Diamond', price: 2700, quantity: 3 },
-//     { name: 'Sapphire', price: 1400, quantity: 7 },
-//     { name: 'Ruby', price: 800, quantity: 2 },
-//   ],
-//   calcTotalPrice(stoneName) {},
-// };
+const chopShop = {
+  stones: [
+    { name: 'Emerald', price: 1300, quantity: 4 },
+    { name: 'Diamond', price: 2700, quantity: 3 },
+    { name: 'Sapphire', price: 1400, quantity: 7 },
+    { name: 'Ruby', price: 800, quantity: 2 },
+  ],
+  calcTotalPrice(stoneName) {},
+};
 
-// console.log(chopShop.calcTotalPrice('Emerald')); // 5200
-// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
-// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
-// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+console.log(chopShop.calcTotalPrice('Emerald')); // 5200
+console.log(chopShop.calcTotalPrice('Diamond')); // 8100
+console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
+console.log(chopShop.calcTotalPrice('Ruby')); // 1600
 
 
 // Example 2 - Телефонная книга
